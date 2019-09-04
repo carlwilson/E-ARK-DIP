@@ -20,8 +20,6 @@ An HTML version of the E-ARK Dissemenation Information Package Specification is 
 
 See [Markdown documentation ](https://guides.github.com/features/mastering-markdown/) for a deeper understanding on how to edit Markdown documents.
 
-
-
 ## Previous versions of the specification
 
 Previous versions of the specification are available on the [archive](./archive/) folder.
