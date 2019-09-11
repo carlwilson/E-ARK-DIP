@@ -10,7 +10,7 @@ abstract: |
           This will enable repository interoperability and assist in the
           management of the preservation of digital content.
 version: 2.0.1
-date: 15.07.2019
+date: 09.09.2019
 ---
 
 {{ page.subtitle }}
@@ -480,7 +480,7 @@ EAD example of \<chronlist>
 **Example 1:** Example of a whole METS document describing an dissimination information package with no representations.
 
 ```xml
-<mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-DIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd">
+<mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-DIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
   <mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
     <mets:agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
       <mets:name>RODA-in</mets:name>
@@ -552,7 +552,7 @@ EAD example of \<chronlist>
 <a name="e-arksipmetsextension"></a>
 
 ### 6.1.1\. E-ARK SIP METS Extension
-**Location:** [https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd](https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd)   
+**Location:** [http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd](http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd)   
 
 **Context:** XML-schema for the attributes added by SIP and reused in the DIP   
 
