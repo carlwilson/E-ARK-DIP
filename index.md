@@ -93,15 +93,15 @@ Date: {{ page.date }}
 4.2.1.3\.  [Description 3 - The description of the relation between the representations and the Access Software](#description3-thedescriptionoftherelationbetweentherepresentationsandtheaccesssoftware)  
 4.3\.  [Descriptive metadata - e.g. EAD](#descriptivemetadata-e.g.ead)  
 4.3.1\.  [Access restrictions](#accessrestrictions)  
-5\.  [Appendix A: E-ARK Information Package METS example](#appendixa:e-arkinformationpackagemetsexample)  
-6\.  [Appendix B: External Schema and Vocabularies](#appendixb:externalschemaandvocabularies)  
-6.1\.  [External Schema](#externalschema)  
-6.1.1\.  [E-ARK SIP METS Extension](#e-arksipmetsextension)  
-6.2\.  [Controlled Vocabularies](#controlledvocabularies)  
-6.2.1\.  [OAIS Package type](#oaispackagetype)  
-6.2.2\.  [dmdSec status](#dmdsecstatus)  
-7\.  [Appendix C: A Full List of E-ARK DIP Requirements](#appendixc:afulllistofe-arkdiprequirements)  
-7.1\.  [Bibliography](#bibliography)  
+5\.  [Appendices](#appendices)  
+5.1\.  [Appendix A: E-ARK Information Package METS example](#appendixa:e-arkinformationpackagemetsexample)  
+5.2\.  [Appendix B: External Schema](#appendixb:externalschema)  
+5.2.1\.  [E-ARK SIP METS Extension](#e-arksipmetsextension)  
+5.3\.  [Appendix C: External Vocabularies](#appendixc:externalvocabularies)  
+5.3.1\.  [OAIS Package type](#oaispackagetype)  
+5.3.2\.  [dmdSec status](#dmdsecstatus)  
+5.4\.  [Appendix D: A Full List of E-ARK DIP Requirements](#appendixd:afulllistofe-arkdiprequirements)  
+6\.  [Bibliography](#bibliography)  
 
 
 <a name="introduction"></a>
@@ -471,10 +471,13 @@ EAD example of \<chronlist>
  </chronlist>
 </accessrestrict>
 ```
+<a name="appendices"></a>
+
+# 5\. Appendices
 
 <a name="appendixa:e-arkinformationpackagemetsexample"></a>
 
-# 5\. Appendix A: E-ARK Information Package METS example
+## 5.1\. Appendix A: E-ARK Information Package METS example
 
 
 **Example 1:** Example of a whole METS document describing an dissimination information package with no representations.
@@ -541,17 +544,15 @@ EAD example of \<chronlist>
 ```
 
 
-<a name="appendixb:externalschemaandvocabularies"></a>
+<a name="appendixb:externalschema"></a>
 
-# 6\. Appendix B: External Schema and Vocabularies
+## 5.2\. Appendix B: External Schema
 
-<a name="externalschema"></a>
 
-## 6.1\. External Schema
 
 <a name="e-arksipmetsextension"></a>
 
-### 6.1.1\. E-ARK SIP METS Extension
+### 5.2.1\. E-ARK SIP METS Extension
 **Location:** [http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd](http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd)   
 
 **Context:** XML-schema for the attributes added by SIP and reused in the DIP   
@@ -561,13 +562,15 @@ EAD example of \<chronlist>
 An extension schema with the added attributes for use in this profile. <br/> 
 The schema is used with a namespace prefix of sip. <br/> 
 
-<a name="controlledvocabularies"></a>
 
-## 6.2\. Controlled Vocabularies
+<a name="appendixc:externalvocabularies"></a>
+
+## 5.3\. Appendix C: External Vocabularies
+
 
 <a name="oaispackagetype"></a>
 
-### 6.2.1\. OAIS Package type
+### 5.3.1\. OAIS Package type
 <a name="VocabularyOAISPackageType"></a>
 
 **Maintained By:** DILCIS Board   
@@ -583,7 +586,7 @@ Describes the OAIS type the package belongs to in the OAIS reference model.
 
 <a name="dmdsecstatus"></a>
 
-### 6.2.2\. dmdSec status
+### 5.3.2\. dmdSec status
 <a name="VocabularyStatus"></a>
 
 **Maintained By:** DILCIS Board   
@@ -597,9 +600,9 @@ Describes the OAIS type the package belongs to in the OAIS reference model.
 Describes the status of the descriptive metadata section (dmdSec) which is supported by the profile.  
   
 
-<a name="appendixc:afulllistofe-arkdiprequirements"></a>
+<a name="appendixd:afulllistofe-arkdiprequirements"></a>
 
-# 7\. Appendix C: A Full List of E-ARK DIP Requirements
+## 5.4\. Appendix D: A Full List of E-ARK DIP Requirements
 
 |  ID     | Name, Location & Description | Card & Level |
 | ------- | ---------------------------- | ------------ |
@@ -615,18 +618,18 @@ Describes the status of the descriptive metadata section (dmdSec) which is suppo
 
 <a name="bibliography"></a>
 
-## 7.1\. Bibliography
+# 6\. Bibliography
 Bredenberg, Karin, Björn Skog, Anders Bo Nielsen, Kathrine Hougaard Edsen Johansen, Alex Thirifays,
 Sven Schlarb, Andrew Wilson, et al. 2018. Common Specification for Information Packages (Csip). ERCIM
 News. 2.0.0-DRAFT ed. Digital Information LifeCycle Interoperability Standard Board (DILCIS Board).
-http://earkcsip.dilcis.eu.
+[http://earkcsip.dilcis.eu/](http://earkcsip.dilcis.eu/)
 
 OAIS. 2012. Reference Model for an Open Archival Information System. CCSDS 650.0-M-2 (Magenta
-Book). CCSDS - Consultative Committee for Space Data Systems. http://public.ccsds.org/publications/
-archive/650x0b1.pdf.
+Book). CCSDS - Consultative Committee for Space Data Systems.
+[http://public.ccsds.org/publications/archive/650x0b1.pdf](http://public.ccsds.org/publications/archive/650x0b1.pdf).
 
 PREMIS. 2017. PREMIS Data Dictionary for Preservation Metadata, Version 3.0. The Library of Congress.
-https://www.loc.gov/standards/premis/v3/index.html.
+[https://www.loc.gov/standards/premis/v3/index.html](https://www.loc.gov/standards/premis/v3/index.html).
 
 
 # Postface
@@ -644,10 +647,11 @@ https://www.loc.gov/standards/premis/v3/index.html.
 
 | Revision No. | Date       | Authors(s)                       | Organisation | Description                                                           |
 |--------------|------------|----------------------------------|--------------|----------------------------|
-| 1.0          | 20.12.2018 | Phillip Tømmerholt <br/>Anders Bo Nielsen | DNA | Review version             |
-| 1.0.1        | 20.03.2019 | Phillip Tømmerholt <br/>Anders Bo Nielsen | DNA | Corrected typos            |
-| 1.0.2        | 26.04.2019 | Phillip Tømmerholt <br/>Anders Bo Nielsen | DNA | Corrected typos            |
-| 1.1.0        | 27.05.2019 | Phillip Tømmerholt <br/>Anders Bo Nielsen | DNA | Align with CSIP            |
+| 2.0-DRAFT    | 20.12.2018 | Phillip Tømmerholt <br/>Anders Bo Nielsen | DNA | Review version             |
+| 2.0-RC       | 20.03.2019 | Phillip Tømmerholt <br/>Anders Bo Nielsen | DNA | Corrected typos            |
+| 2.0-RC2      | 26.04.2019 | Phillip Tømmerholt <br/>Anders Bo Nielsen | DNA | Corrected typos            |
+| 2.0.0        | 27.05.2019 | Phillip Tømmerholt <br/>Anders Bo Nielsen | DNA | Align with CSIP            |
+| 2.0.1        | 09.09.2019 | Carl Wilson <br/>Karin Bredenberg         | OPF <br/>SNA| Layout and PDF Generation  |
 
 
 III Acknowledgements
