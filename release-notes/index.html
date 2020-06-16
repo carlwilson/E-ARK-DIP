@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/site.css" >
 
-  <title>E-ARK DIP | DIP METS Profile</title>
+  <title>E-ARK DIP | Release Notes</title>
 </head>
 
 <body role="document">
@@ -47,7 +47,7 @@
                  
                  <!-- display the top level navigation for items that don’t have a submenu -->
                      
-                         <li class="nav-item active">
+                         <li class="nav-item">
                      
                      <a class="nav-link" href="/profile/">Profile</a>
                  
@@ -102,15 +102,59 @@
   </header>
 
   <div class="container theme-showcase" role="main">
-    <h1 id="dip-mets-profile">DIP METS Profile</h1>
+    <h1 id="release-notes">RELEASE NOTES</h1>
 
+<h2 id="categories-of-specification-change">Categories of specification change</h2>
+
+<h3 id="major">Major</h3>
+<p>Changes are not backwardly compatible with previous versions.
+A new major version, e.g. from 2.x.y to 3.0.0</p>
+
+<h3 id="minor">Minor</h3>
+<p>Backward compatible changes with the current major version.
+Often a new feature or extension.</p>
+
+<h3 id="corrections">Corrections</h3>
+<p>Corrections and improvements to grammar and spelling, not intended
+to change the meaning of the specification.</p>
+
+<h3 id="administrative">Administrative:</h3>
+<p>Standard changes between versions, e.g. version number and release date.</p>
+
+<h2 id="version-204">Version 2.0.4</h2>
+<p>June 12th 2020</p>
+
+<h3 id="specification-changes">Specification Changes</h3>
+
+<h4 id="major-1">Major</h4>
+<p>None</p>
+
+<h4 id="minor-1">Minor</h4>
+<p>None</p>
+
+<h4 id="corrections-1">Corrections</h4>
 <ul>
-  <li><a href="/profile/E-ARK-DIP.xml">Current METS Profile XML document</a></li>
-  <li><a href="/profile/E-ARK-DIP.xml">Version 2.0.4 12-06-2020</a></li>
-  <li><a href="/profile/E-ARK-DIP-v2-0-2.xml">Version 2.0.2 28-10-2019</a></li>
-  <li><a href="/profile/E-ARK-DIP-v2-0-1.xml">Version 2.0.1 09-09-2019</a></li>
-  <li><a href="/profile/E-ARK-DIP-v2-0-0.xml">Version 2.0.0 31-05-2019</a></li>
+  <li>Check schemalocations once more in the profile [<a href="https://github.com/DILCISBoard/E-ARK-DIP/issues/49">#49</a>, <a href="https://github.com/DILCISBoard/E-ARK-DIP/pull/50">#50</a>]</li>
+  <li>METS Profile appendix elements ID’s bug [<a href="https://github.com/DILCISBoard/E-ARK-DIP/issues/44">#44</a>, <a href="https://github.com/DILCISBoard/E-ARK-DIP/pull/46">#46</a>]</li>
 </ul>
+
+<h4 id="administrative-1">Administrative</h4>
+<ul>
+  <li>Version number increment and revision history [<a href="https://github.com/DILCISBoard/E-ARK-DIP/pull/48">#48</a>, <a href="https://github.com/DILCISBoard/E-ARK-DIP/pull/52">#52</a>].</li>
+</ul>
+
+<h3 id="web-site-and-pdf-presentation">Web site and PDF presentation</h3>
+<ul>
+  <li>Uniform site structure and DILCIS branding:
+    <ul>
+      <li>Archive and descriptions for profile resources [<a href="https://github.com/DILCISBoard/E-ARK-DIP/pull/47">#47</a>].</li>
+      <li>Standard access to archive PDF versions [<a href="https://github.com/DILCISBoard/E-ARK-DIP/pull/47">#47</a>].</li>
+      <li>Updates to Docker site production and Travis publication [<a href="https://github.com/DILCISBoard/E-ARK-DIP/pull/45">#45</a>, <a href="https://github.com/DILCISBoard/E-ARK-DIP/pull/51">#51</a>].</li>
+    </ul>
+  </li>
+  <li>When ID contains REF linking to resource doesnt work bug [<a href="https://github.com/DILCISBoard/E-ARK-DIP/issues/43">#43</a>]</li>
+</ul>
+
 
   </div>
       <!-- FOOTER -->
