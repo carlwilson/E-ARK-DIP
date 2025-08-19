@@ -1,0 +1,6 @@
+= Appendices
+
+include::appendices/mets.examples.adoc[]
+include::appendices/mets.schema.adoc[]
+include::appendices/mets.vocabs.adoc[]
+include::appendices/mets.metadata.requirements.adoc[]
