@@ -81,6 +81,8 @@ jobs:
           ./create_site.sh
           mkdir _site
           docker run --rm -v "$PWD"/site:/usr/src/app -v "$PWD"/_site:/_site starefossen/github-pages jekyll build -d /_site
+          ls -alh site
+          ls -alh _site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
 
