@@ -6,23 +6,26 @@ Anders_Bo Nielsen; Phillip Tømmerholt
 :revremark: Version updates and publication changes.
 :doctype: book
 :source-highlighter: rouge
-:prewrap!:
 :rouge-style: github
 :org: Danish National Archives
 :org_1: Danish National Archives
 :sectnums:
+:partnums:
+:!chapter-signifier:
+:toc: macro
 :description: This is the extension of the E-ARK CSIP profile for creation of an E-ARK DIP. The profile describes the \
 Dissemination Information Package (DIP) specification and the implementation of METS for packaging OAIS conformant \
 Information Packages. The profile is accompanied by a text document explaining the details of use of this profile. \
 This will enable repository interoperability and assist in the management of the preservation of digital content.
-:toc: macro
 
 :sectnums!:
+:partnums!:
 include::common-intro.adoc[]
 
 toc::[]
 
 :sectnums:
+:partnums:
 include::introduction.adoc[]
 include::structure.adoc[]
 include::content-info-types.adoc[]
@@ -30,4 +33,5 @@ include::metadata.adoc[]
 include::bibliography.adoc[]
 include::appendices.adoc[]
 :sectnums!:
+:partnums!:
 include::postface.adoc[]

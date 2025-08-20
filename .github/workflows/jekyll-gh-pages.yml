@@ -26,9 +26,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           submodules: recursive
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
+        with:
+          ruby-version: '3.1'
+      - run: gem install asciidoctor
+      - run: gem install asciidoctor-pdf
       - if: github.event.release != null
         name: set release vars from release event
         run: |
@@ -37,7 +43,7 @@ jobs:
       - if: github.event.release == null
         name: Get previous release
         id: previousrelease
-        uses: InsonusK/get-latest-release@v1.0.1
+        uses: InsonusK/get-latest-release@v1.1.0
         with:
           myToken: ${{ github.token }}
           exclude_types: draft|prerelease
@@ -69,17 +75,14 @@ jobs:
       - name: Build the spec-publisher project & produce site artifacts
         run: |
           ./create_site.sh
-      - name: Run Docker job for PDF publication
-        run: |
-          docker run --rm -v "$PWD:/source" --entrypoint /source/create_pdf.sh eark4all/spec-pdf-publisher
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
       - name: Build with Jekyll docker box
         run: |
           mkdir _site
           docker run --rm -v "$PWD"/site:/usr/src/app -v "$PWD"/_site:/_site starefossen/github-pages jekyll build -d /_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
 
   # Deployment job
   deploy:
@@ -91,4 +94,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
