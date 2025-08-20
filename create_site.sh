@@ -29,8 +29,11 @@ cp -rf "$SCRIPT_DIR/spec-publisher/res/md/common-intro.adoc" "$SCRIPT_DIR/spec-p
 echo " - Generating site HTML with asciidoctor."
 asciidoctor -a linkcss -a copycss -e -o - "$SCRIPT_DIR/specification/eark-dip.adoc" >> "$SCRIPT_DIR/site/index.html"
 
-echo " - Generating site PDF with asciidoctor."
+echo " - Generating site HTML with asciidoctor."
 asciidoctor-pdf -o site/pdf/eark-dip.pdf specification/eark-dip.adoc
+
+echo " - Generating site with Jekyll."
+docker run --rm -v "$PWD"/site:/usr/src/app -v "$PWD"/_site:/_site starefossen/github-pages jekyll build -d /_site
 
 echo " - Cleaning up site directory and copying spec-publisher site..."
 git clean -f "$SCRIPT_DIR/specification/"
