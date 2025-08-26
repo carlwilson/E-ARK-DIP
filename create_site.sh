@@ -36,5 +36,3 @@ echo " - Generating site with Jekyll."
 docker run --rm -v "$PWD"/site:/usr/src/app -v "$PWD"/_site:/_site starefossen/github-pages jekyll build -d /_site
 
 echo " - Cleaning up site directory and copying spec-publisher site..."
-ls -alh site
-ls -alh _site
