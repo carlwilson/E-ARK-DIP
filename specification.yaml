@@ -1,0 +1,66 @@
+---
+tables:
+  - name: metadata-root-requirements
+    heading: "=== Node level: mets root"
+    type: requirements
+    section: metsRootElement
+    examples: true
+    dest: specification/metadata-root-requirements.md
+
+  - name: metadata-metsHdr-requirements
+    heading: "=== Node level: metsHdr"
+    type: requirements
+    section: metsHdr
+    examples: true
+    dest: specification/metadata-metsHdr-requirements.md
+
+  - name: metadata-dmdsec-requirements
+    heading: "=== Node level: dmdSec"
+    type: requirements
+    section: dmdSec
+    examples: true
+    dest: specification/metadata-dmdsec-requirements.md
+
+  - name: metadata-amdsec-requirements
+    heading: "=== Node level: amdSec"
+    type: requirements
+    section: amdSec
+    examples: true
+    
+  - name: metadata-filesec-requirements
+    heading: "=== Node level: fileSec"
+    type: requirements
+    section: fileSec
+    examples: true
+    
+  - name: metadata-structmap-requirements
+    heading: "=== Node level: structMap"
+    type: requirements
+    section: structMap
+    examples: true
+    
+appendices:
+  - name: mets.examples
+    heading: "E-ARK Information Package METS Example"
+    label: "A"
+    type: mets
+    section: Appendix
+    
+  - name: mets.schema
+    heading: "External Schema"
+    label: "B"
+    type: mets
+    section: external_schema
+    
+  - name: mets.vocabs
+    heading: "External Vocabularies"
+    label: "C"
+    type: mets
+    section: vocabulary
+    
+  - name: mets.metadata.requirements
+    heading: "E-ARK DIP Metadata Requirements"
+    label: "D"
+    type: mets
+    section: requirements
+    

@@ -1,0 +1,20 @@
+[chapter]
+= Introduction
+
+== Definition of a DIP
+
+The OAIS reference model defines a DIP as:
+
+____
+An Information Package, derived from one or more AIPs, and sent by Archives to the Consumer in response to a request to the OAIS.
+____
+
+The definition of an E-ARK DIP is that it corresponds to a CSIP which is ready to be processed by its designated Access Software; if it is not suited for processing and rendering by its designated Access Software, it is not (yet) a DIP.
+This is a very generic, but handy, definition. To be more specific, an E-ARK DIP is:
+
+* an IP which is sent (or is ready to be sent) to the user in an Access environment;
+* supported by tools, i.e. can be rendered by Access Software.
+
+First of all, the DIP looks like the AIP: It replicates the structure of the AIP from which it is derived. It also inherits metadata as well as the intellectual entities of the AIP.
+An E-ARK AIP may in its entirety therefore also be a E-ARK DIP, however in most cases it is necessary to convert from an AIP to a DIP.  The DIP allows for example for the inclusion of new DIP representation formats, which are more user-friendly than the AIP formats that are intended for long-term preservation purposes.
+It also allows for the updating of the metadata as well as for the addition of new metadata elements.  Representation Information, which is required for rendering and understanding the intellectual content, might also be added, and as a direct consequence, there may be a need for new folders and files, for example within the '`Documentation`' folder.

@@ -24,11 +24,20 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    strategy:
+          matrix:
+            ruby-version: ['3.1']
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           submodules: recursive
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+      - run: gem install asciidoctor
+      - run: gem install asciidoctor-pdf
       - if: github.event.release != null
         name: set release vars from release event
         run: |
@@ -37,7 +46,7 @@ jobs:
       - if: github.event.release == null
         name: Get previous release
         id: previousrelease
-        uses: InsonusK/get-latest-release@v1.0.1
+        uses: InsonusK/get-latest-release@v1.1.0
         with:
           myToken: ${{ github.token }}
           exclude_types: draft|prerelease
@@ -65,35 +74,18 @@ jobs:
           RELEASE_DATE: ${{ steps.cut_release_date.outputs.substring }}
           RELEASE_VERSION: ${{ steps.cut_release_version.outputs.substring }}
         with:
-          templates: "specification/metadata.md"
+          templates: "metadata.yaml"
       - name: Build the spec-publisher project & produce site artifacts
         run: |
-          cd spec-publisher
-          mvn clean package
-          java -jar target/mets-profile-proc.jar ../profile/E-ARK-DIP.xml
-      - name: Run Docker job for site publication
-        run: |
-          docker run --rm -v "$PWD:/source" --entrypoint /source/create-site.sh eark4all/spec-pdf-publisher
-          ls -alh ./docs
-      - name: Build the spec-publisher project & produce PDF artifacts
-        run: |
-          git clone --branch feat/pdf-publication https://github.com/DILCISBoard/spec-publisher.git pdf-publisher
-          cd pdf-publisher
-          mvn clean package
-          java -jar target/mets-profile-proc.jar ../profile/E-ARK-DIP.xml
-      - name: Run Docker job for PDF publication
-        run: |
-          docker run --rm -v "$PWD:/source" --entrypoint /source/create-pdf.sh eark4all/spec-pdf-publisher
-          ls -alh ./docs
-          ls -alh ./docs/pdf
+          ./create_site.sh
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
       - name: Build with Jekyll docker box
         run: |
           mkdir _site
-          docker run --rm -v "$PWD"/docs:/usr/src/app -v "$PWD"/_site:/_site starefossen/github-pages jekyll build -d /_site
+          docker run --rm -v "$PWD"/site:/usr/src/app -v "$PWD"/_site:/_site starefossen/github-pages jekyll build -d /_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
 
   # Deployment job
   deploy:
@@ -105,4 +97,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
