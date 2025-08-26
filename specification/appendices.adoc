@@ -1,3 +1,5 @@
+[appendices]
+
 = Appendices
 
 include::appendices/mets.examples.adoc[]
